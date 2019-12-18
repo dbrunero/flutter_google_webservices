@@ -3,7 +3,7 @@
 flutter_google_webservices is a plugin useful to manage Google's APIs like Places (Details, Autocomplete...) and Maps.
 This plugin is in progress.
 
-Soon new features.
+#### Soon new features.
 
 
 ## Getting Started
