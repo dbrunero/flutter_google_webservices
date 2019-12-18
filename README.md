@@ -13,13 +13,13 @@ In your "pubspec.yaml" import the plugin.
 ```dart
 // AUTOCOMPLETE EXAMPLE
 
-var autocomplete = GetAutocomplete(); // or GetDetails();
+var autocomplete = GetAutocomplete();
 
 var result = autocomplete.getAutocompleteByString(STRING_TO_SEARCH, apiKey);
 
 // DETAILS EXAMPLE
 
-var details = GetDetails(); // or GetDetails();
+var details = GetDetails();
 
 var result = details.getDetailsById(PLACE_ID_TO_SEARCH, apiKey);
 ```
