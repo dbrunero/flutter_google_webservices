@@ -1,14 +1,19 @@
-# flutter_google_webservices
+# Flutter Google Webservices
 
-A new Flutter package project.
+flutter_google_webservices is a plugin useful to manage Google's APIs like Places (Details, Autocomplete...) and Maps.
+This plugin is in progress.
+
+Soon new features.
+
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+In your "pubspec.yaml" import the plugin.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+
+var autocomplete = GetAutocomplete(); // or GetDetails();
+
+var result = aautocomplete.getAutocompleteByString(STRING_TO_SEARCH, apiKey);
+
+```
