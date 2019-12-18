@@ -11,9 +11,15 @@ Soon new features.
 In your "pubspec.yaml" import the plugin.
 
 ```dart
+// AUTOCOMPLETE EXAMPLE
 
 var autocomplete = GetAutocomplete(); // or GetDetails();
 
-var result = aautocomplete.getAutocompleteByString(STRING_TO_SEARCH, apiKey);
+var result = autocomplete.getAutocompleteByString(STRING_TO_SEARCH, apiKey);
 
+// DETAILS EXAMPLE
+
+var details = GetDetails(); // or GetDetails();
+
+var result = details.getDetailsById(PLACE_ID_TO_SEARCH, apiKey);
 ```
