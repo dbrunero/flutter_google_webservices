@@ -1,6 +1,6 @@
 name: flutter_google_webservices
 description: A single plugin to manage Google webservices (Places, Maps)
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/dbrunero/flutter_google_webservices
 
 environment:
