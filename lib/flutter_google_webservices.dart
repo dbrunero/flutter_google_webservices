@@ -3,6 +3,7 @@ library flutter_google_webservices;
 import 'package:flutter_google_webservices/models/details.dart';
 import 'package:flutter_google_webservices/services/detail_service.dart';
 import 'package:flutter_google_webservices/services/prediciton_service.dart';
+import 'package:rxdart/rxdart.dart';
 
 import 'models/predictions.dart';
 
@@ -25,5 +26,20 @@ class GetDetails {
   Future<PlaceDetails> getDetailsById(String query, String apiKey) async {
     PlaceDetails details = await detailsService.getDetails(query, apiKey);
     return details;
+  }
+}
+
+
+class AutocompleteStream {
+  final _predictionStream = PublishSubject<Predictions>();
+
+  Stream<Predictions> get prediction => _predictionStream.stream;
+
+  void getPredictions(String query, String apiKey) async {
+    _predictionStream.sink.add(await predictionService.getPredictions(query, apiKey));
+  }
+
+  dispose() {
+    _predictionStream.close();
   }
 }
