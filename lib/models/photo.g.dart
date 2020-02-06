@@ -10,15 +10,15 @@ Photo _$PhotoFromJson(Map<String, dynamic> json) {
   return Photo(
     height: json['height'] as int,
     htmlAttributions:
-        (json['htmlAttributions'] as List)?.map((e) => e as String)?.toList(),
-    photoReference: json['photoReference'] as String,
+        (json['html_attributions'] as List)?.map((e) => e as String)?.toList(),
+    photoReference: json['photo_reference'] as String,
     width: json['width'] as int,
   );
 }
 
 Map<String, dynamic> _$PhotoToJson(Photo instance) => <String, dynamic>{
       'height': instance.height,
-      'htmlAttributions': instance.htmlAttributions,
-      'photoReference': instance.photoReference,
+      'html_attributions': instance.htmlAttributions,
+      'photo_reference': instance.photoReference,
       'width': instance.width,
     };
