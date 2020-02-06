@@ -9,13 +9,13 @@ part of 'address.dart';
 Address _$AddressFromJson(Map<String, dynamic> json) {
   return Address(
     types: (json['types'] as List)?.map((e) => e as String)?.toList(),
-    longName: json['longName'] as String,
-    shortName: json['shortName'] as String,
+    longName: json['long_name'] as String,
+    shortName: json['short_name'] as String,
   );
 }
 
 Map<String, dynamic> _$AddressToJson(Address instance) => <String, dynamic>{
-      'longName': instance.longName,
-      'shortName': instance.shortName,
+      'long_name': instance.longName,
+      'short_name': instance.shortName,
       'types': instance.types,
     };
