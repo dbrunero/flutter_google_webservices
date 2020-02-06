@@ -8,19 +8,19 @@ part of 'opening_hours.dart';
 
 OpeningHours _$OpeningHoursFromJson(Map<String, dynamic> json) {
   return OpeningHours(
-    openNow: json['openNow'] as bool,
+    openNow: json['open_now'] as bool,
     periods: (json['periods'] as List)
         ?.map((e) =>
             e == null ? null : Period.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     weekdayText:
-        (json['weekdayText'] as List)?.map((e) => e as String)?.toList(),
+        (json['weekday_text'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
 Map<String, dynamic> _$OpeningHoursToJson(OpeningHours instance) =>
     <String, dynamic>{
-      'openNow': instance.openNow,
+      'open_now': instance.openNow,
       'periods': instance.periods,
-      'weekdayText': instance.weekdayText,
+      'weekday_text': instance.weekdayText,
     };
