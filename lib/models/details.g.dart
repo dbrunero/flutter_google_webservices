@@ -12,13 +12,13 @@ PlaceDetails _$PlaceDetailsFromJson(Map<String, dynamic> json) {
     result: json['result'] == null
         ? null
         : DetailsResult.fromJson(json['result'] as Map<String, dynamic>),
-    htmlAttribution: json['htmlAttribution'] as List,
+    htmlAttribution: json['html_attributions'] as List,
   );
 }
 
 Map<String, dynamic> _$PlaceDetailsToJson(PlaceDetails instance) =>
     <String, dynamic>{
-      'htmlAttribution': instance.htmlAttribution,
+      'html_attributions': instance.htmlAttribution,
       'result': instance.result,
       'status': instance.status,
     };

@@ -8,24 +8,24 @@ part of 'reviews.dart';
 
 Review _$ReviewFromJson(Map<String, dynamic> json) {
   return Review(
-    authorName: json['authorName'] as String,
-    authorUrl: json['authorUrl'] as String,
+    authorName: json['author_name'] as String,
+    authorUrl: json['author_url'] as String,
     language: json['language'] as String,
-    profilePhotoUrl: json['profilePhotoUrl'] as String,
+    profilePhotoUrl: json['profile_photo_url'] as String,
     rating: json['rating'] as int,
-    relativeTimeDescription: json['relativeTimeDescription'] as String,
+    relativeTimeDescription: json['relative_time_description'] as String,
     text: json['text'] as String,
     time: json['time'] == null ? null : DateTime.parse(json['time'] as String),
   );
 }
 
 Map<String, dynamic> _$ReviewToJson(Review instance) => <String, dynamic>{
-      'authorName': instance.authorName,
-      'authorUrl': instance.authorUrl,
+      'author_name': instance.authorName,
+      'author_url': instance.authorUrl,
       'language': instance.language,
-      'profilePhotoUrl': instance.profilePhotoUrl,
+      'profile_photo_url': instance.profilePhotoUrl,
       'rating': instance.rating,
-      'relativeTimeDescription': instance.relativeTimeDescription,
+      'relative_time_description': instance.relativeTimeDescription,
       'text': instance.text,
       'time': instance.time?.toIso8601String(),
     };

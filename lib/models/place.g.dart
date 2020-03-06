@@ -14,17 +14,17 @@ Place _$PlaceFromJson(Map<String, dynamic> json) {
             (e) => e == null ? null : Term.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     id: json['id'] as String,
-    matchedSubstrings: (json['matchedSubstrings'] as List)
+    matchedSubstrings: (json['matched_substrings'] as List)
         ?.map((e) => e == null
             ? null
             : MatchedSubstring.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    placeId: json['placeId'] as String,
+    placeId: json['place_id'] as String,
     reference: json['reference'] as String,
-    structuredFormatting: json['structuredFormatting'] == null
+    structuredFormatting: json['structured_formatting'] == null
         ? null
         : StructuredFormatting.fromJson(
-            json['structuredFormatting'] as Map<String, dynamic>),
+            json['structured_formatting'] as Map<String, dynamic>),
     types: (json['types'] as List)?.map((e) => e as String)?.toList(),
   );
 }
@@ -32,10 +32,10 @@ Place _$PlaceFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$PlaceToJson(Place instance) => <String, dynamic>{
       'description': instance.description,
       'id': instance.id,
-      'matchedSubstrings': instance.matchedSubstrings,
-      'placeId': instance.placeId,
+      'matched_substrings': instance.matchedSubstrings,
+      'place_id': instance.placeId,
       'reference': instance.reference,
-      'structuredFormatting': instance.structuredFormatting,
+      'structured_formatting': instance.structuredFormatting,
       'terms': instance.terms,
       'types': instance.types,
     };

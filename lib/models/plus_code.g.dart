@@ -8,12 +8,12 @@ part of 'plus_code.dart';
 
 PlussCode _$PlussCodeFromJson(Map<String, dynamic> json) {
   return PlussCode(
-    compoundCode: json['compoundCode'] as String,
-    globalCode: json['globalCode'] as String,
+    compoundCode: json['compound_code'] as String,
+    globalCode: json['global_code'] as String,
   );
 }
 
 Map<String, dynamic> _$PlussCodeToJson(PlussCode instance) => <String, dynamic>{
-      'compoundCode': instance.compoundCode,
-      'globalCode': instance.globalCode,
+      'compound_code': instance.compoundCode,
+      'global_code': instance.globalCode,
     };
