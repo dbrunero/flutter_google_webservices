@@ -7,8 +7,8 @@ part 'matched_substring.g.dart';
 @JsonSerializable()
 class MatchedSubstring {
 
-  int length;
-  int offset;
+  int? length;
+  int? offset;
 
   MatchedSubstring({
     this.length,

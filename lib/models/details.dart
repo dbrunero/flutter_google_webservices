@@ -6,9 +6,9 @@ part 'details.g.dart';
 
 @JsonSerializable()
 class PlaceDetails {
-  List<dynamic> htmlAttribution;
-  DetailsResult result;
-  String status;
+  List<dynamic>? htmlAttribution;
+  DetailsResult? result;
+  String? status;
 
   PlaceDetails({this.status, this.result, this.htmlAttribution});
 

@@ -7,8 +7,8 @@ part 'geometry.g.dart';
 
 @JsonSerializable()
 class Geometry {
-  Location location;
-  ViewportLoc viewport;
+  Location? location;
+  ViewportLoc? viewport;
 
   Geometry({this.location, this.viewport});
 

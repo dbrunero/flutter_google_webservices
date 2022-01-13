@@ -8,8 +8,8 @@ part of 'matched_substring.dart';
 
 MatchedSubstring _$MatchedSubstringFromJson(Map<String, dynamic> json) {
   return MatchedSubstring(
-    length: json['length'] as int,
-    offset: json['offset'] as int,
+    length: json['length'] as int?,
+    offset: json['offset'] as int?,
   );
 }
 

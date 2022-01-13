@@ -8,11 +8,10 @@ part of 'photo.dart';
 
 Photo _$PhotoFromJson(Map<String, dynamic> json) {
   return Photo(
-    height: json['height'] as int,
-    htmlAttributions:
-        (json['html_attributions'] as List)?.map((e) => e as String)?.toList(),
-    photoReference: json['photo_reference'] as String,
-    width: json['width'] as int,
+    height: json['height'] as int?,
+    htmlAttributions: (json['html_attributions'] as List?)?.map((e) => e as String).toList(),
+    photoReference: json['photo_reference'] as String?,
+    width: json['width'] as int?,
   );
 }
 

@@ -8,13 +8,13 @@ part of 'reviews.dart';
 
 Review _$ReviewFromJson(Map<String, dynamic> json) {
   return Review(
-    authorName: json['author_name'] as String,
-    authorUrl: json['author_url'] as String,
-    language: json['language'] as String,
-    profilePhotoUrl: json['profile_photo_url'] as String,
-    rating: json['rating'] as int,
-    relativeTimeDescription: json['relative_time_description'] as String,
-    text: json['text'] as String,
+    authorName: json['author_name'] as String?,
+    authorUrl: json['author_url'] as String?,
+    language: json['language'] as String?,
+    profilePhotoUrl: json['profile_photo_url'] as String?,
+    rating: json['rating'] as int?,
+    relativeTimeDescription: json['relative_time_description'] as String?,
+    text: json['text'] as String?,
     time: json['time'] == null ? null : DateTime.parse(json['time'] as String),
   );
 }

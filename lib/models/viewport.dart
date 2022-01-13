@@ -6,8 +6,8 @@ part 'viewport.g.dart';
 
 @JsonSerializable()
 class ViewportLoc {
-  Location northeast;
-  Location southwest;
+  Location? northeast;
+  Location? southwest;
 
   ViewportLoc({
     this.northeast,

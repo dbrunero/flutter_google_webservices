@@ -8,8 +8,8 @@ part of 'term.dart';
 
 Term _$TermFromJson(Map<String, dynamic> json) {
   return Term(
-    offset: json['offset'] as int,
-    value: json['value'] as String,
+    offset: json['offset'] as int?,
+    value: json['value'] as String?,
   );
 }
 

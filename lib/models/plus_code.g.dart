@@ -8,8 +8,8 @@ part of 'plus_code.dart';
 
 PlussCode _$PlussCodeFromJson(Map<String, dynamic> json) {
   return PlussCode(
-    compoundCode: json['compound_code'] as String,
-    globalCode: json['global_code'] as String,
+    compoundCode: json['compound_code'] as String?,
+    globalCode: json['global_code'] as String?,
   );
 }
 

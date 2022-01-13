@@ -8,11 +8,11 @@ part of 'details.dart';
 
 PlaceDetails _$PlaceDetailsFromJson(Map<String, dynamic> json) {
   return PlaceDetails(
-    status: json['status'] as String,
+    status: json['status'] as String?,
     result: json['result'] == null
         ? null
         : DetailsResult.fromJson(json['result'] as Map<String, dynamic>),
-    htmlAttribution: json['html_attributions'] as List,
+    htmlAttribution: json['html_attributions'] as List?,
   );
 }
 

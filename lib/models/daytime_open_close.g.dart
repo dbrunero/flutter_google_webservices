@@ -8,8 +8,8 @@ part of 'daytime_open_close.dart';
 
 DayTimeOpenClose _$DayTimeOpenCloseFromJson(Map<String, dynamic> json) {
   return DayTimeOpenClose(
-    time: json['time'] as String,
-    day: json['day'] as int,
+    time: json['time'] as String?,
+    day: json['day'] as int?,
   );
 }
 

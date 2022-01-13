@@ -4,8 +4,8 @@ part 'term.g.dart';
 
 @JsonSerializable()
 class Term {
-  int offset;
-  String value;
+  int? offset;
+  String? value;
 
   Term({
     this.offset,

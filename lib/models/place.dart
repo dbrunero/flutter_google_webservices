@@ -1,5 +1,3 @@
-
-
 import 'package:json_annotation/json_annotation.dart';
 
 import 'matched_substring.dart';
@@ -10,30 +8,18 @@ part 'place.g.dart';
 
 @JsonSerializable()
 class Place {
+  String? description;
+  String? id;
+  List<MatchedSubstring?>? matchedSubstrings;
+  String? placeId;
+  String? reference;
+  StructuredFormatting? structuredFormatting;
+  List<Term?>? terms;
+  List<String>? types;
 
-  String description;
-  String id;
-  List<MatchedSubstring> matchedSubstrings;
-  String placeId;
-  String reference;
-  StructuredFormatting structuredFormatting;
-  List<Term> terms;
-  List<String> types;
+  Place({this.description, this.terms, this.id, this.matchedSubstrings, this.placeId, this.reference, this.structuredFormatting, this.types});
 
-
-  Place({
-    this.description,
-    this.terms,
-    this.id,
-    this.matchedSubstrings,
-    this.placeId,
-    this.reference,
-    this.structuredFormatting,
-    this.types
-  });
-
-  factory Place.fromJson(Map<String, dynamic> json) =>
-      _$PlaceFromJson(json);
+  factory Place.fromJson(Map<String, dynamic> json) => _$PlaceFromJson(json);
 
   Map<String, dynamic> toJson() => _$PlaceToJson(this);
 }

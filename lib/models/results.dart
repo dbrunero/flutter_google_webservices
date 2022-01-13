@@ -10,29 +10,29 @@ part 'results.g.dart';
 
 @JsonSerializable()
 class DetailsResult {
-  List<Address> addressComponents;
-  String ardAddress;
-  String formattedAddress;
-  String formattedPhoneNumber;
-  Geometry geometry;
-  String icon;
-  String id;
-  String internationalPhoneNumber;
-  String name;
-  OpeningHours openingHours;
-  List<Photo> photos;
-  String placeId;
-  PlussCode plusCode;
-  double rating;
-  String reference;
-  List<Review> reviews;
-  String scope;
-  List<String> types;
-  String url;
-  int userRatingTotal;
-  int utcOffset;
-  String vicinity;
-  String website;
+  List<Address?>? addressComponents;
+  String? ardAddress;
+  String? formattedAddress;
+  String? formattedPhoneNumber;
+  Geometry? geometry;
+  String? icon;
+  String? id;
+  String? internationalPhoneNumber;
+  String? name;
+  OpeningHours? openingHours;
+  List<Photo?>? photos;
+  String? placeId;
+  PlussCode? plusCode;
+  double? rating;
+  String? reference;
+  List<Review?>? reviews;
+  String? scope;
+  List<String>? types;
+  String? url;
+  int? userRatingTotal;
+  int? utcOffset;
+  String? vicinity;
+  String? website;
 
   DetailsResult(
       {this.types,
@@ -59,8 +59,7 @@ class DetailsResult {
       this.vicinity,
       this.website});
 
-  factory DetailsResult.fromJson(Map<String, dynamic> json) =>
-      _$DetailsResultFromJson(json);
+  factory DetailsResult.fromJson(Map<String, dynamic> json) => _$DetailsResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$DetailsResultToJson(this);
 }
