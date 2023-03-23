@@ -4,9 +4,9 @@ part 'address.g.dart';
 
 @JsonSerializable()
 class Address {
-  String longName;
-  String shortName;
-  List<String> types;
+  String? longName;
+  String? shortName;
+  List<String>? types;
 
   Address({this.types, this.longName, this.shortName});
 

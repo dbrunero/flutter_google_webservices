@@ -8,70 +8,54 @@ part of 'results.dart';
 
 DetailsResult _$DetailsResultFromJson(Map<String, dynamic> json) {
   return DetailsResult(
-    types: (json['types'] as List)?.map((e) => e as String)?.toList(),
-    rating: (json['rating'] as num)?.toDouble(),
-    reference: json['reference'] as String,
-    placeId: json['placeId'] as String,
-    id: json['id'] as String,
-    formattedAddress: json['formattedAddress'] as String,
-    geometry: json['geometry'] == null
-        ? null
-        : Geometry.fromJson(json['geometry'] as Map<String, dynamic>),
-    name: json['name'] as String,
-    addressComponents: (json['addressComponents'] as List)
-        ?.map((e) =>
-            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    ardAddress: json['ardAddress'] as String,
-    formattedPhoneNumber: json['formattedPhoneNumber'] as String,
-    icon: json['icon'] as String,
-    internationalPhoneNumber: json['internationalPhoneNumber'] as String,
-    openingHours: json['openingHours'] == null
-        ? null
-        : OpeningHours.fromJson(json['openingHours'] as Map<String, dynamic>),
-    photos: (json['photos'] as List)
-        ?.map(
-            (e) => e == null ? null : Photo.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    plusCode: json['plusCode'] == null
-        ? null
-        : PlussCode.fromJson(json['plusCode'] as Map<String, dynamic>),
-    reviews: (json['reviews'] as List)
-        ?.map((e) =>
-            e == null ? null : Review.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    scope: json['scope'] as String,
-    url: json['url'] as String,
-    userRatingTotal: json['userRatingTotal'] as int,
-    utcOffset: json['utcOffset'] as int,
-    vicinity: json['vicinity'] as String,
-    website: json['website'] as String,
+    types: (json['types'] as List?)?.map((e) => e as String).toList(),
+    rating: (json['rating'] as num?)?.toDouble(),
+    reference: json['reference'] as String?,
+    placeId: json['place_id'] as String?,
+    id: json['id'] as String?,
+    formattedAddress: json['formatted_address'] as String?,
+    geometry: json['geometry'] == null ? null : Geometry.fromJson(json['geometry'] as Map<String, dynamic>),
+    name: json['name'] as String?,
+    addressComponents: (json['address_components'] as List?)?.map((e) => e == null ? null : Address.fromJson(e as Map<String, dynamic>)).toList(),
+    ardAddress: json['ard_address'] as String?,
+    formattedPhoneNumber: json['formatted_phone_number'] as String?,
+    icon: json['icon'] as String?,
+    internationalPhoneNumber: json['international_phone_number'] as String?,
+    openingHours: json['opening_hours'] == null ? null : OpeningHours.fromJson(json['opening_hours'] as Map<String, dynamic>),
+    photos: (json['photos'] as List?)?.map((e) => e == null ? null : Photo.fromJson(e as Map<String, dynamic>)).toList(),
+    plusCode: json['plus_code'] == null ? null : PlussCode.fromJson(json['plus_code'] as Map<String, dynamic>),
+    reviews: (json['reviews'] as List?)?.map((e) => e == null ? null : Review.fromJson(e as Map<String, dynamic>)).toList(),
+    scope: json['scope'] as String?,
+    url: json['url'] as String?,
+    userRatingTotal: json['user_rating_total'] as int?,
+    utcOffset: json['utc_offset'] as int?,
+    vicinity: json['vicinity'] as String?,
+    website: json['website'] as String?,
   );
 }
 
-Map<String, dynamic> _$DetailsResultToJson(DetailsResult instance) =>
-    <String, dynamic>{
-      'addressComponents': instance.addressComponents,
-      'ardAddress': instance.ardAddress,
-      'formattedAddress': instance.formattedAddress,
-      'formattedPhoneNumber': instance.formattedPhoneNumber,
+Map<String, dynamic> _$DetailsResultToJson(DetailsResult instance) => <String, dynamic>{
+      'address_components': instance.addressComponents,
+      'ard_address': instance.ardAddress,
+      'formatted_address': instance.formattedAddress,
+      'formatted_phone_number': instance.formattedPhoneNumber,
       'geometry': instance.geometry,
       'icon': instance.icon,
       'id': instance.id,
-      'internationalPhoneNumber': instance.internationalPhoneNumber,
+      'international_phone_number': instance.internationalPhoneNumber,
       'name': instance.name,
-      'openingHours': instance.openingHours,
+      'opening_hours': instance.openingHours,
       'photos': instance.photos,
-      'placeId': instance.placeId,
-      'plusCode': instance.plusCode,
+      'place_id': instance.placeId,
+      'plus_code': instance.plusCode,
       'rating': instance.rating,
       'reference': instance.reference,
       'reviews': instance.reviews,
       'scope': instance.scope,
       'types': instance.types,
       'url': instance.url,
-      'userRatingTotal': instance.userRatingTotal,
-      'utcOffset': instance.utcOffset,
+      'user_rating_total': instance.userRatingTotal,
+      'utc_offset': instance.utcOffset,
       'vicinity': instance.vicinity,
       'website': instance.website,
     };

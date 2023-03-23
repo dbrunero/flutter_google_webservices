@@ -4,8 +4,8 @@ part 'daytime_open_close.g.dart';
 
 @JsonSerializable()
 class DayTimeOpenClose {
-  int day;
-  String time;
+  int? day;
+  String? time;
 
   DayTimeOpenClose({this.time, this.day});
 

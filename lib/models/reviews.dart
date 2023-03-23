@@ -5,14 +5,14 @@ part 'reviews.g.dart';
 
 @JsonSerializable()
 class Review {
-  String authorName;
-  String authorUrl;
-  String language;
-  String profilePhotoUrl;
-  int rating;
-  String relativeTimeDescription;
-  String text;
-  DateTime time;
+  String? authorName;
+  String? authorUrl;
+  String? language;
+  String? profilePhotoUrl;
+  int? rating;
+  String? relativeTimeDescription;
+  String? text;
+  DateTime? time;
 
   Review(
       {this.authorName,

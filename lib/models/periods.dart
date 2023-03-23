@@ -6,8 +6,8 @@ part 'periods.g.dart';
 
 @JsonSerializable()
 class Period {
-  DayTimeOpenClose close;
-  DayTimeOpenClose open;
+  DayTimeOpenClose? close;
+  DayTimeOpenClose? open;
 
   Period({this.close, this.open});
 

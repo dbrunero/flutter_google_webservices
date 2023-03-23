@@ -5,8 +5,8 @@ part 'plus_code.g.dart';
 
 @JsonSerializable()
 class PlussCode {
-  String compoundCode;
-  String globalCode;
+  String? compoundCode;
+  String? globalCode;
 
   PlussCode({this.compoundCode, this.globalCode});
 

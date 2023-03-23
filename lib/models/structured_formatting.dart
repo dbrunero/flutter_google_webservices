@@ -6,18 +6,13 @@ part 'structured_formatting.g.dart';
 
 @JsonSerializable()
 class StructuredFormatting {
-  String mainText;
-  List<MatchedSubstring> mainTextMatchedSubstrings;
-  String secondaryText;
+  String? mainText;
+  List<MatchedSubstring?>? mainTextMatchedSubstrings;
+  String? secondaryText;
 
-  StructuredFormatting({
-    this.mainText,
-    this.mainTextMatchedSubstrings,
-    this.secondaryText
-  });
+  StructuredFormatting({this.mainText, this.mainTextMatchedSubstrings, this.secondaryText});
 
-  factory StructuredFormatting.fromJson(Map<String, dynamic> json) =>
-      _$StructuredFormattingFromJson(json);
+  factory StructuredFormatting.fromJson(Map<String, dynamic> json) => _$StructuredFormattingFromJson(json);
 
   Map<String, dynamic> toJson() => _$StructuredFormattingToJson(this);
 }
